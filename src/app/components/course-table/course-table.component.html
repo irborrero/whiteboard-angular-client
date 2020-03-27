@@ -1,2 +1,9 @@
-<p>course-table works!</p>
-<h1>HOLAAAAAAAA MARIANA</h1>
+<h1>Course Table Component</h1>
+<ul>
+  <li *ngFor="let course of courses">
+    <a href="course/{{course._id}}">
+      {{course.title}}
+    </a>
+  </li>
+</ul>
+
