@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "wbdv-sp20-iramirez-client-angular"
+    }
+  },
+  "defaultProject": "wbdv-sp20-iramirez-client-angular",
+  "cli": {
+    "analytics": "36d4e865-371e-4306-a470-57247b7e4f80"
+  }
 }
