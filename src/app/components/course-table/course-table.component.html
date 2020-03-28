@@ -3,9 +3,15 @@
   <ul>
     <li class="list-group"
         *ngFor="let course of courses">
-      <a class="list-group-item" href="table/courses/{{course._id}}/modules">
-        {{course.title}}
-      </a>
+      <div class="list-group-item">
+        <a href="table/courses/{{course._id}}/modules">
+          {{course.title}}
+        </a>
+        <a class="float-right"
+           href="table/courses/{{course._id}}/quizzes">
+          Quizzes
+        </a>
+      </div>
     </li>
   </ul>
 

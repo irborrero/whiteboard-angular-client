@@ -12,11 +12,11 @@ h1 {
   background-color: brown;
   padding-left: 50px;
   padding-right: 50px;
-  text-align: center;
 }
 
 .list-group-item {
   margin: 5px;
+  border-radius: 3px;
   width: 300px;
   position: relative;
   margin-left: 37%;
