@@ -5,8 +5,7 @@ export class CourseServiceClient {
   findAllCourses = () =>
     fetch('http://wbdv-generic-server.herokuapp.com/api/ramirezborrero.i/courses')
       .then(response => response.json())
-    findCourseById = async (cid) => {
-      const response = await fetch(`http://wbdv-generic-server.herokuapp.com/api/ramirezborrero.i/courses/:cid`)
-      return await response.json();
-    }
+    findCourseById = (cid) =>
+      fetch(`http://wbdv-generic-server.herokuapp.com/api/ramirezborrero.i/courses/${cid}`)
+        .then(response => response.json())
 }

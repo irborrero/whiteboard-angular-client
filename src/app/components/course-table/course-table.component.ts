@@ -9,7 +9,7 @@ import {CourseServiceClient} from '../../services/CourseServiceClient';
 export class CourseTableComponent implements OnInit {
 
   courses: [
-    {_id: '123', title: 'Course A'}
+    {_id: '', title: ''}
     ]
 
   constructor(private service: CourseServiceClient) { }
