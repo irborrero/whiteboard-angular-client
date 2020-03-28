@@ -1,3 +1,17 @@
 .active a {
   color: white;
 }
+
+.active.list-group-item{
+  margin-top: 5px;
+}
+
+h3{
+  color: white;
+  text-align: center;
+}
+
+.list-group-item {
+  margin: 5px;
+  border-radius: 3px;
+}

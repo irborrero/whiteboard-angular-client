@@ -1,0 +1,28 @@
+label {
+  margin-bottom: 20px;
+  color: white;
+  padding-top: 12px;
+  padding-left: 2%;
+  font-size: xx-large;
+}
+
+i{
+  color: white;
+  width: fit-content;
+  height: fit-content;
+}
+
+.container-course-viewer-title {
+  background-color: brown;
+  position: relative;
+  width: 100vw;
+  height: 10vh;
+  padding-left: 50px;
+}
+
+.container-module-list {
+  background-color: brown;
+  position: relative;
+  height: 100vh;
+  padding: 2%;
+}
