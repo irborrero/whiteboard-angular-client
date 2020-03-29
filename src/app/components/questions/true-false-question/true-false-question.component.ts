@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-true-false-question',
@@ -6,6 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./true-false-question.component.css']
 })
 export class TrueFalseQuestionComponent implements OnInit {
+
+  @Input()
+  question = {_id: '', title: '', question: '', answer: '', correct: ''}
+  grading = false
+  faCheck = 'faCheck';
+  faTimes = 'faTimes';
+
+  grade = () => { this.grading = true; }
 
   constructor() { }
 

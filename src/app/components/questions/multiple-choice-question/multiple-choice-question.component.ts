@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-multiple-choice-question',
@@ -6,6 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./multiple-choice-question.component.css']
 })
 export class MultipleChoiceQuestionComponent implements OnInit {
+
+  @Input()
+  question = {_id: '', title: '', question: '', answer: '', correct: ''}
+  grading = false
+  faCheck = 'faCheck';
+  faTimes = 'faTimes';
+
+  grade = () => { this.grading = true; }
 
   constructor() { }
 
