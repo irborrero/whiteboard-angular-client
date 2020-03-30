@@ -1,0 +1,15 @@
+.container-quizes {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: brown;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}

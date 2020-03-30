@@ -8,7 +8,9 @@ import {Component, Input, OnInit} from '@angular/core';
 export class MultipleChoiceQuestionComponent implements OnInit {
 
   @Input()
-  question = {_id: '', title: '', question: '', answer: '', correct: ''}
+  question = {_id: '', title: '', question: '', choices: '', correct: ''}
+  answer = '';
+
   grading = false
   faCheck = 'faCheck';
   faTimes = 'faTimes';

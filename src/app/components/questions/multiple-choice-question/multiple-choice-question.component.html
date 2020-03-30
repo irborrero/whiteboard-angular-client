@@ -1,1 +1,31 @@
-<p>multiple-choice-question works!</p>
+<h4>{{question.title}}</h4>
+<h5>{{question.question}}</h5>
+<div class="form-group-row">
+  <div *ngFor="let choice of question.choices"
+       class = "list-group-item"
+       [class]="{
+         'bg-success-custom': grading && (question.correct === choice),
+         'bg-danger-custom':  grading && (question.correct !== choice) && (answer == choice)
+         }">
+    <label>
+      <input [(ngModel)]="answer"
+             type="radio"
+             value="{{choice}}"
+             name="{{question._id}}"/> {{choice}}
+    </label>
+    <i [hidden]="
+        !grading ||
+        !((question.correct === choice) && (answer == choice))"
+       class="fa fa-check float-right"></i>
+    <i [hidden]="!grading ||
+       !((question.correct !== choice) && (answer == choice))"
+       class="fa fa-times float-right"></i>
+  </div>
+</div>
+<br/>
+Your answer: {{answer}}
+<br/>
+<button class="btn" (click)="grade()"> Grade
+</button>
+
+

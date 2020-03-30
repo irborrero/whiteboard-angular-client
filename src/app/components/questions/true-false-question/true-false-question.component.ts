@@ -8,10 +8,11 @@ import {Component, Input, OnInit} from '@angular/core';
 export class TrueFalseQuestionComponent implements OnInit {
 
   @Input()
-  question = {_id: '', title: '', question: '', answer: '', correct: ''}
-  grading = false
-  faCheck = 'faCheck';
-  faTimes = 'faTimes';
+  question = {_id: '', title: '', question: '',  correct: ''}
+  answer = '';
+
+  grading = false;
+
 
   grade = () => { this.grading = true; }
 

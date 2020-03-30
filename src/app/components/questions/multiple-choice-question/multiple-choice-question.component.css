@@ -1,0 +1,21 @@
+.btn {
+  background-color: green;
+  color: white;
+  margin: 10px;
+}
+
+.fa-check {
+  color: darkgreen;
+}
+
+.fa-times {
+  color: brown;
+}
+
+.bg-danger-custom {
+  background-color: #ff000040;
+}
+
+.bg-success-custom {
+  background-color: #A7E3B2;
+}
