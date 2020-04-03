@@ -13,3 +13,9 @@ h2 {
   margin-top: 50px;
   margin-bottom: 30px;
 }
+
+.attempt {
+  font-size: small;
+  color: midnightblue;
+  font-style: italic;
+}

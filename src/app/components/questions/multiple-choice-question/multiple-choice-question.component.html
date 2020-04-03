@@ -25,7 +25,13 @@
 <br/>
 Your answer: {{answer}}
 <br/>
-<button class="btn" (click)="submitAnswer()"> Submit
+<button class="btn" (click)="submitAnswer()">
+    <span [hidden]="submitted">
+      Submit
+    </span>
+  <span [hidden]="!submitted">
+      Submitted
+    </span>
 </button>
 
 

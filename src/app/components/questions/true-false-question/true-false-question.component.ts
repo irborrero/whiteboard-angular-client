@@ -17,10 +17,12 @@ export class TrueFalseQuestionComponent implements OnInit {
   answerChange = new EventEmitter<string>()
 
   grading = false;
+  submitted = false;
 
-  submitAnswer = () =>
-    this.answerChange.emit(this.answer)
-
+  submitAnswer = () => {
+    this.answerChange.emit(this.answer);
+    this.submitted = true;
+  }
   grade = () => { this.grading = true; }
 
   constructor() { }

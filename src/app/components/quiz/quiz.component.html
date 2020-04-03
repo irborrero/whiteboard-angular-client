@@ -13,9 +13,17 @@
       </div>
     </li>
   </ul>
-  <button class = "btn"(click)="submitQuiz()">
-    Submit Quiz
-  </button>
+  <div [hidden]="submitted">
+    <button class = "btn"(click)="submitQuiz()">
+      Submit Quiz
+    </button>
+  </div>
+  <div [hidden]="!submitted">
+    <button class = "btn">
+      <a routerLink="/table/courses/{{courseId}}/quizzes/">See my result</a>
+    </button>
+  </div>
+
 </div>
 
 

@@ -1,37 +1,37 @@
 <h4>{{question.title}}</h4>
-<h5>{{question.question}}</h5>
-<div class="form-group-row">
-  <label class="list-group-item"
-         [class]="{
+  <h5>{{question.question}}</h5>
+  <div class="form-group-row">
+    <label class="list-group-item"
+           [class]="{
          'bg-success-custom': grading && (question.correct === 'true'),
          'bg-danger-custom':  grading && (question.correct === 'false') && (answer == 'true')
          }">
-    <input type="radio"
-           value="true"
-           [(ngModel)]="answer"
-           name="{{question._id}}"/>
-    True
+      <input type="radio"
+             value="true"
+             [(ngModel)]="answer"
+             name="{{question._id}}"/>
+      True
 
-    <i [hidden]="
+      <i [hidden]="
         !grading ||
         !((question.correct === 'true') && (answer == 'true'))"
-       class="fa fa-check float-right"></i>
-    <i [hidden]="!grading ||
+         class="fa fa-check float-right"></i>
+      <i [hidden]="!grading ||
        !((question.correct !== 'true') && (answer == 'true'))"
-       class="fa fa-times float-right"></i>
+         class="fa fa-times float-right"></i>
 
-  </label>
+    </label>
 
-  <label class="list-group-item"
-         [class]="{
+    <label class="list-group-item"
+           [class]="{
           'bg-success-custom': grading && (question.correct === 'false'),
           'bg-danger-custom':  grading && (question.correct === 'true') && (answer == 'false')
           }">
-    <input type="radio"
-           value="false"
-           [(ngModel)]="answer"
-           name="{{question._id}}"/>
-    False
+      <input type="radio"
+             value="false"
+             [(ngModel)]="answer"
+             name="{{question._id}}"/>
+      False
 
       <i [hidden]="
         !grading ||
@@ -41,12 +41,20 @@
        !((question.correct !== 'false') && (answer == 'false'))"
          class="fa fa-times float-right"></i>
 
-  </label>
-</div>
-<br/>
-Your answer: {{answer}}
-<br/>
+    </label>
+  </div>
+  <br/>
+  Your answer: {{answer}}
+  <br/>
 
-<button class="btn" (click)="submitAnswer()"> Submit
-</button>
+  <button class="btn" (click)="submitAnswer()">
+    <span [hidden]="submitted">
+      Submit
+    </span>
+    <span [hidden]="!submitted">
+      Submitted
+    </span>
+  </button>
+
+
 
