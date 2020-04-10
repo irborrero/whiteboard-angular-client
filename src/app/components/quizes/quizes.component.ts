@@ -25,7 +25,7 @@ export class QuizesComponent implements OnInit {
   setup = (quizzes) => {
     this.quizzes = quizzes;
     this.quizzes.forEach(quiz => {
-        fetch(`http://localhost:3000/api/quizzes/${quiz._id}/attempts`)
+        fetch(`https://nodes-server-hw9.herokuapp.com/api/quizzes/${quiz._id}/attempts`)
           .then(response => response.json())
             .then(attempts => quiz.attempts = attempts);
     });
