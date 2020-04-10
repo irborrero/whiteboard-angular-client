@@ -18,7 +18,7 @@ export class QuizComponent implements OnInit {
               private route: ActivatedRoute) { }
 
   submitQuiz = () => {
-    fetch(`http://localhost:3000/api/quizzes/${this.quizId}/attempts`, {
+    fetch(`https://nodes-server-hw9.herokuapp.com/api/quizzes/${this.quizId}/attempts`, {
       method: 'POST',
       body: JSON.stringify(this.questions),
       headers: {
